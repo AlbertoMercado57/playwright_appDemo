@@ -15,7 +15,7 @@ export class DatePickerPage {
         const calendarInput = this.page.getByPlaceholder('Form Picker')
         await calendarInput.click();
         const dateToAssert = await this.selectDateInTheCalendar(numOfDaysfromToday);
-        //await expect(calendarInput).toHaveValue(dateToAssert)
+        await expect(calendarInput).toHaveValue(dateToAssert)
         
     }
 

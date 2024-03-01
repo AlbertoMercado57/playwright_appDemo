@@ -37,7 +37,7 @@ test.beforeEach(async ({ page }) => {
     const datePicker = new DatePickerPage(page);
     await goTo.FormLayoutsPage();
     await goTo.DatePickerPage();
-    await datePicker.SelectDateAfterToday(10);
+    await datePicker.SelectDateAfterToday(5);
   
   
 

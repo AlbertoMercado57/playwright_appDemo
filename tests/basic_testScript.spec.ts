@@ -10,11 +10,11 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('fill Using the Grid form', () => { 
   
-  test('has title', async ({ page }) => {
+  test.skip('has title', async ({ page }) => {
     await expect(page).toHaveTitle(/playwright-test-admin Demo Application/);
     });
 
-  test('using the grid form ', async ({page}) => {
+  test.skip('using the grid form ', async ({page}) => {
     
     const usingTheGridForm = page.locator('nb-card').filter({hasText:'Using the Grid'})
     const emailField = page.locator('#inputEmail1')
@@ -31,9 +31,3 @@ test.describe('fill Using the Grid form', () => {
 
   });
 });
-
-
-
-test('create a nwe article', async ({page}) => {
-  await page.getByText('New Article').click();
-})

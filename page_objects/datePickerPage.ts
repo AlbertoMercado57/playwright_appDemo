@@ -11,7 +11,7 @@ export class DatePickerPage {
     }
 
     async SelectDateAfterToday(numOfDaysfromToday: number) {
-        const caledarInput = this.page.getByPlaceholder('Form Picker')
+        const calendarInput = this.page.getByPlaceholder('Form Picker')
         await this.page.locator('nb-calendar-day-cell').fill(`${numOfDaysfromToday}`)
         const dateToAssert = await this.SelectDateAfterToday(numOfDaysfromToday);
     }

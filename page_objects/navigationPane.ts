@@ -11,7 +11,7 @@ export class NavigationPage {
         this.page = page
 
     }
-/* this private method makes sure the aria-expanded 
+/* this private method checks the aria-expanded 
 atribute is set to True or False. If set to False, it clicks 
 the title within the pane to expand.  
 */ 
@@ -31,35 +31,6 @@ the title within the pane to expand.
     async DatePickerPage() {
         await this.page.getByTitle('Datepicker').click();
 
-
-    }
-
-    async ModalAndOverlay() {
-        await this.GroupMenuItem('Modal & Overlays')
-
-    }
-
-    async ExtraComponents() {
-        await this.GroupMenuItem('Extra Components')
-
-
-    }
-
-    async Charts() {
-        this.page.getByText('Charts').click();
-        await this.GroupMenuItem('Charts')
-
-
-    }
-
-    async TablesAndData() {
-        await this.GroupMenuItem('Tables & Data')
-
-
-    }
-
-    async Auth() {
-        await this.GroupMenuItem('Auth')
 
     }
 }

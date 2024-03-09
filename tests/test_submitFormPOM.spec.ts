@@ -25,7 +25,7 @@ test.beforeEach(async ({ page }) => {
  
   });
 
-  test('select one day from today', async ({page}) => {
+  test('select days from today', async ({page}) => {
     const goTo = new NavigationPage(page);
     const datePicker = new DatePickerPage(page);
     await goTo.FormLayoutsPage();

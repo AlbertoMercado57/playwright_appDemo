@@ -11,7 +11,10 @@ export class NavigationPage {
         this.page = page
 
     }
-
+/* this private method makes sure the aria-expanded 
+atribute is set to True or False. If set to False, it clicks 
+the title within the pane to expand.  
+*/ 
     private async GroupMenuItem(groupItemTitle: string) {
         const groupMenuItem = this.page.getByTitle(groupItemTitle)
         const expanded = await groupMenuItem.getAttribute('aria-expanded')
@@ -26,17 +29,13 @@ export class NavigationPage {
     }
 
     async DatePickerPage() {
-        await this.GroupMenuItem('Datepicker')
         await this.page.getByTitle('Datepicker').click();
-        await this.page.getByPlaceholder('Form Picker').click();
-        await this.page.locator('nb-calendar-picker').click();
 
 
     }
 
     async ModalAndOverlay() {
-        //await this.GroupMenuItem('Modal & Overlays')
-        await this.page.getByText('Modal & Overlays').click();
+        await this.GroupMenuItem('Modal & Overlays')
 
     }
 
@@ -48,7 +47,7 @@ export class NavigationPage {
 
     async Charts() {
         this.page.getByText('Charts').click();
-        //await this.GroupMenuItem('Charts')
+        await this.GroupMenuItem('Charts')
 
 
     }
@@ -63,8 +62,4 @@ export class NavigationPage {
         await this.GroupMenuItem('Auth')
 
     }
-
- 
-
-
 }

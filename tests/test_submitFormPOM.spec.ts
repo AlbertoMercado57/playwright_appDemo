@@ -13,7 +13,6 @@ test.beforeEach(async ({ page }) => {
     const goTo = new NavigationPage(page)
     await goTo.FormLayoutsPage();
     await goTo.DatePickerPage();
-    
   });
 
   test('parametrized methods', async ({page}) => {
@@ -21,8 +20,6 @@ test.beforeEach(async ({ page }) => {
     const onFormLayoutsPage = new FormLayoutsPage(page);
     await goTo.FormLayoutsPage();
     await onFormLayoutsPage.SubmitUsingTheGridForm('test25@test.com', 'welcome12', 'option 1');
-
- 
   });
 
   test('select days from today', async ({page}) => {
@@ -31,7 +28,5 @@ test.beforeEach(async ({ page }) => {
     await goTo.FormLayoutsPage();
     await goTo.DatePickerPage();
     await datePicker.SelectDateAfterToday(2);
-  
-
   });
 

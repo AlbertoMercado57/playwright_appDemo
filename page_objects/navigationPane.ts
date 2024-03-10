@@ -20,17 +20,13 @@ the title within the pane to expand.
         const expanded = await groupMenuItem.getAttribute('aria-expanded')
         if (expanded == 'false')
             await groupMenuItem.click()
-
-
         }
     async FormLayoutsPage() {
         await this.GroupMenuItem('Forms')
         await this.page.getByText('Form Layouts').click();
-    }
+        }
 
     async DatePickerPage() {
         await this.page.getByTitle('Datepicker').click();
-
-
     }
 }
